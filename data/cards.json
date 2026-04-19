@@ -1,0 +1,432 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-04-18",
+  "data_policy": "Static metadata is stable across time; fallback pricing is verified periodically and overridden by live fetch when available.",
+  "cards": [
+    {
+      "id": "chase-freedom-unlimited",
+      "name": "Chase Freedom Unlimited",
+      "issuer": "Chase",
+      "official_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1.5,
+      "rewards_categories": [
+        { "category": "dining", "rate": 3, "notes": "restaurants, takeout, eligible delivery" },
+        { "category": "travel", "rate": 5, "notes": "via Chase Travel" },
+        { "category": "everything", "rate": 3, "notes": "drugstore purchases" }
+      ],
+      "tags": ["no_fee"],
+      "complexity": "low",
+      "best_for": ["flat-rate cashback with bonus categories", "Chase ecosystem"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 18.24,
+        "apr_max": 27.74,
+        "intro_purchase_apr_months": 15,
+        "intro_balance_transfer_apr_months": 15,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 5,
+        "signup_bonus_value": 250,
+        "signup_bonus_description": "$250 after $500 spend in first 3 months (limited-time offer ending April 30, 2026)",
+        "last_verified": "2026-04-18"
+      }
+    },
+    {
+      "id": "capital-one-platinum-secured",
+      "name": "Capital One Platinum Secured",
+      "issuer": "Capital One",
+      "official_url": "https://www.capitalone.com/credit-cards/platinum-secured/",
+      "image_url": null,
+      "credit_requirement": "none",
+      "rewards_type": "none",
+      "rewards_flat_rate": 0,
+      "rewards_categories": [],
+      "tags": ["starter", "credit_building", "secured", "no_fee", "no_foreign_fee"],
+      "complexity": "low",
+      "best_for": ["building credit from scratch", "no credit history"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 29.99,
+        "apr_max": 29.99,
+        "intro_purchase_apr_months": 0,
+        "intro_balance_transfer_apr_months": 0,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 0,
+        "signup_bonus_value": 0,
+        "signup_bonus_description": "",
+        "last_verified": "2026-04-18"
+      }
+    },
+    {
+      "id": "discover-it-secured",
+      "name": "Discover it Secured",
+      "issuer": "Discover",
+      "official_url": "https://www.discover.com/credit-cards/secured/",
+      "image_url": null,
+      "credit_requirement": "none",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "gas", "rate": 2, "cap": 1000, "notes": "quarterly cap" },
+        { "category": "dining", "rate": 2, "cap": 1000, "notes": "quarterly cap" }
+      ],
+      "tags": ["starter", "credit_building", "secured", "no_fee", "no_foreign_fee"],
+      "complexity": "low",
+      "best_for": ["building credit", "first card with rewards"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 28.24,
+        "apr_max": 28.24,
+        "intro_purchase_apr_months": 0,
+        "intro_balance_transfer_apr_months": 6,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 3,
+        "signup_bonus_value": 0,
+        "signup_bonus_description": "Cashback Match: Discover doubles all cashback earned in the first year",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "discover-it-student-cashback",
+      "name": "Discover it Student Cash Back",
+      "issuer": "Discover",
+      "official_url": "https://www.discover.com/credit-cards/student/",
+      "image_url": null,
+      "credit_requirement": "none",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "everything", "rate": 5, "cap": 1500, "notes": "rotating quarterly categories on activation, up to $1,500/quarter" }
+      ],
+      "tags": ["starter", "student", "credit_building", "no_fee", "no_foreign_fee"],
+      "complexity": "medium",
+      "best_for": ["students", "building credit with rewards"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 18.24,
+        "apr_max": 27.24,
+        "intro_purchase_apr_months": 6,
+        "intro_balance_transfer_apr_months": 6,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 3,
+        "signup_bonus_value": 0,
+        "signup_bonus_description": "Cashback Match: Discover doubles all cashback earned in first year",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "citi-double-cash",
+      "name": "Citi Double Cash",
+      "issuer": "Citi",
+      "official_url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 2,
+      "rewards_categories": [],
+      "tags": ["no_fee", "balance_transfer"],
+      "complexity": "low",
+      "best_for": ["flat-rate cashback", "balance transfers", "simple rewards"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 18.24,
+        "apr_max": 28.24,
+        "intro_purchase_apr_months": 0,
+        "intro_balance_transfer_apr_months": 18,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 3,
+        "signup_bonus_value": 200,
+        "signup_bonus_description": "$200 cash back after $1,500 spend in first 6 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "chase-freedom-flex",
+      "name": "Chase Freedom Flex",
+      "issuer": "Chase",
+      "official_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "everything", "rate": 5, "cap": 1500, "notes": "rotating quarterly categories on activation" },
+        { "category": "dining", "rate": 3 },
+        { "category": "travel", "rate": 5, "notes": "through Chase Travel" }
+      ],
+      "tags": ["no_fee"],
+      "complexity": "medium",
+      "best_for": ["rotating categories", "maximizing cashback"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 19.99,
+        "apr_max": 28.74,
+        "intro_purchase_apr_months": 15,
+        "intro_balance_transfer_apr_months": 15,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 5,
+        "signup_bonus_value": 200,
+        "signup_bonus_description": "$200 after $500 spend in 3 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "amex-blue-cash-preferred",
+      "name": "Blue Cash Preferred from American Express",
+      "issuer": "Amex",
+      "official_url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "groceries", "rate": 6, "cap": 6000, "notes": "at US supermarkets, up to $6K/year" },
+        { "category": "streaming", "rate": 6 },
+        { "category": "gas", "rate": 3 }
+      ],
+      "tags": [],
+      "complexity": "medium",
+      "best_for": ["grocery-heavy spending", "families"],
+      "fallback": {
+        "annual_fee": 95,
+        "apr_min": 19.24,
+        "apr_max": 29.99,
+        "intro_purchase_apr_months": 12,
+        "intro_balance_transfer_apr_months": 12,
+        "foreign_transaction_fee": 2.7,
+        "balance_transfer_fee_pct": 3,
+        "signup_bonus_value": 250,
+        "signup_bonus_description": "$250 after $3,000 spend in 6 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "capital-one-savor",
+      "name": "Capital One Savor Cash Rewards",
+      "issuer": "Capital One",
+      "official_url": "https://www.capitalone.com/credit-cards/savor-dining-rewards/",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "dining", "rate": 3 },
+        { "category": "groceries", "rate": 3 },
+        { "category": "streaming", "rate": 3 }
+      ],
+      "tags": ["no_fee", "no_foreign_fee"],
+      "complexity": "low",
+      "best_for": ["dining-heavy spending", "foodies"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 19.99,
+        "apr_max": 29.99,
+        "intro_purchase_apr_months": 15,
+        "intro_balance_transfer_apr_months": 15,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 3,
+        "signup_bonus_value": 200,
+        "signup_bonus_description": "$200 after $500 spend in 3 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "chase-sapphire-preferred",
+      "name": "Chase Sapphire Preferred",
+      "issuer": "Chase",
+      "official_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "travel",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "travel", "rate": 2 },
+        { "category": "dining", "rate": 3 },
+        { "category": "streaming", "rate": 3 },
+        { "category": "online_shopping", "rate": 3 }
+      ],
+      "tags": ["travel_perks", "no_foreign_fee"],
+      "complexity": "medium",
+      "best_for": ["travelers", "points flexibility"],
+      "fallback": {
+        "annual_fee": 95,
+        "apr_min": 21.49,
+        "apr_max": 28.49,
+        "intro_purchase_apr_months": 0,
+        "intro_balance_transfer_apr_months": 0,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 5,
+        "signup_bonus_value": 750,
+        "signup_bonus_description": "60,000 points after $4,000 spend in 3 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "amex-gold",
+      "name": "American Express Gold Card",
+      "issuer": "Amex",
+      "official_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "points",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "dining", "rate": 4 },
+        { "category": "groceries", "rate": 4, "cap": 25000, "notes": "at US supermarkets, up to $25K/year" },
+        { "category": "travel", "rate": 3, "notes": "flights booked direct or via Amex Travel" }
+      ],
+      "tags": ["travel_perks", "no_foreign_fee", "premium", "charge_card"],
+      "complexity": "high",
+      "best_for": ["dining and grocery spending", "travelers who want premium rewards"],
+      "fallback": {
+        "annual_fee": 325,
+        "apr_min": 0,
+        "apr_max": 0,
+        "intro_purchase_apr_months": 0,
+        "intro_balance_transfer_apr_months": 0,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 0,
+        "signup_bonus_value": 900,
+        "signup_bonus_description": "60,000 Membership Rewards points after $6,000 spend in 6 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "capital-one-venture-x",
+      "name": "Capital One Venture X",
+      "issuer": "Capital One",
+      "official_url": "https://www.capitalone.com/credit-cards/venture-x/",
+      "image_url": null,
+      "credit_requirement": "excellent",
+      "rewards_type": "travel",
+      "rewards_flat_rate": 2,
+      "rewards_categories": [
+        { "category": "travel", "rate": 10, "notes": "hotels and rental cars via Capital One Travel" }
+      ],
+      "tags": ["travel_perks", "lounge_access", "no_foreign_fee", "premium"],
+      "complexity": "medium",
+      "best_for": ["frequent travelers", "lounge access"],
+      "fallback": {
+        "annual_fee": 395,
+        "apr_min": 19.99,
+        "apr_max": 29.24,
+        "intro_purchase_apr_months": 0,
+        "intro_balance_transfer_apr_months": 0,
+        "foreign_transaction_fee": 0,
+        "balance_transfer_fee_pct": 0,
+        "signup_bonus_value": 1000,
+        "signup_bonus_description": "75,000 miles after $4,000 spend in 3 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "citi-simplicity",
+      "name": "Citi Simplicity",
+      "issuer": "Citi",
+      "official_url": "https://www.citi.com/credit-cards/citi-simplicity-credit-card",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "none",
+      "rewards_flat_rate": 0,
+      "rewards_categories": [],
+      "tags": ["no_fee", "balance_transfer", "low_apr"],
+      "complexity": "low",
+      "best_for": ["balance transfers", "paying down debt"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 18.24,
+        "apr_max": 28.99,
+        "intro_purchase_apr_months": 12,
+        "intro_balance_transfer_apr_months": 21,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 5,
+        "signup_bonus_value": 0,
+        "signup_bonus_description": "",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "wells-fargo-reflect",
+      "name": "Wells Fargo Reflect",
+      "issuer": "Wells Fargo",
+      "official_url": "https://www.wellsfargo.com/credit-cards/reflect/",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "none",
+      "rewards_flat_rate": 0,
+      "rewards_categories": [],
+      "tags": ["no_fee", "balance_transfer", "low_apr"],
+      "complexity": "low",
+      "best_for": ["longest 0% intro APR", "paying down large balances"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 17.24,
+        "apr_max": 28.99,
+        "intro_purchase_apr_months": 21,
+        "intro_balance_transfer_apr_months": 21,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 5,
+        "signup_bonus_value": 0,
+        "signup_bonus_description": "",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "wells-fargo-active-cash",
+      "name": "Wells Fargo Active Cash",
+      "issuer": "Wells Fargo",
+      "official_url": "https://www.wellsfargo.com/credit-cards/active-cash/",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 2,
+      "rewards_categories": [],
+      "tags": ["no_fee"],
+      "complexity": "low",
+      "best_for": ["flat-rate cashback", "simple rewards"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 19.24,
+        "apr_max": 29.24,
+        "intro_purchase_apr_months": 12,
+        "intro_balance_transfer_apr_months": 12,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 5,
+        "signup_bonus_value": 200,
+        "signup_bonus_description": "$200 after $500 spend in 3 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    },
+    {
+      "id": "bofa-customized-cash",
+      "name": "Bank of America Customized Cash Rewards",
+      "issuer": "Bank of America",
+      "official_url": "https://www.bankofamerica.com/credit-cards/products/cash-rewards-credit-card/",
+      "image_url": null,
+      "credit_requirement": "good",
+      "rewards_type": "cashback",
+      "rewards_flat_rate": 1,
+      "rewards_categories": [
+        { "category": "everything", "rate": 3, "cap": 2500, "notes": "pick your bonus category (gas, online shopping, dining, travel, drug stores, home improvement), up to $2,500/quarter combined with groceries" },
+        { "category": "groceries", "rate": 2, "cap": 2500, "notes": "at grocery stores and wholesale clubs" }
+      ],
+      "tags": ["no_fee"],
+      "complexity": "medium",
+      "best_for": ["BofA customers", "customizable rewards"],
+      "fallback": {
+        "annual_fee": 0,
+        "apr_min": 18.24,
+        "apr_max": 28.24,
+        "intro_purchase_apr_months": 15,
+        "intro_balance_transfer_apr_months": 15,
+        "foreign_transaction_fee": 3,
+        "balance_transfer_fee_pct": 4,
+        "signup_bonus_value": 200,
+        "signup_bonus_description": "$200 after $1,000 spend in 3 months",
+        "last_verified": "NEEDS_VERIFICATION"
+      }
+    }
+  ]
+}
