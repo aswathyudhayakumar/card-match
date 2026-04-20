@@ -8,7 +8,7 @@ An AI-powered credit card recommendation tool that asks you 7 questions and give
 
 ## Why I built this
 
-CardMatch started as a spinoff from a different project I'd been thinking about — a financial jargon buster. That idea came from my time at Axis Bank, where I worked on a digital lending product for farmers. I travelled to Madhya Pradesh for the launch and realised a lot of the users we served didn't understand basic loan terms like APR or interest from the terms and conditions they were signing. I also knew, honestly, that when I got my first credit card, I didn't understand most of that language either. All I knew was what my father had told me: keep your balance low, pay on time, protect your credit score.
+CardMatch started as a spinoff from a different project I'd been thinking about, a financial jargon buster. That idea came from my time at Axis Bank, where I worked on a digital lending product for farmers. I travelled to Madhya Pradesh for the launch and realised a lot of the users we served didn't understand basic loan terms like APR or interest from the terms and conditions they were signing. I also knew, honestly, that when I got my first credit card, I didn't understand most of that language either. All I knew was what my father had told me: keep your balance low, pay on time, protect your credit score.
 
 That made me want to build something that could flag risky language and explain key terms so people knew what they were actually signing up for. I scoped it to US credit cards because credit cards are a huge part of how people here build credit and spend.
 
