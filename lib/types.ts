@@ -98,6 +98,7 @@ export interface EffectivePricing {
 }
 
 // Quiz answer types
+export type UserSegment = "first_card" | "adding_card" | "consolidating" | "upgrading";
 export type Q1Answer = "no_credit" | "building" | "good" | "excellent" | "unknown";
 export type Q2Answer = "always" | "most_months" | "plan_to_carry" | "unsure";
 export type Q3Answer =
@@ -112,9 +113,10 @@ export type Q5Answer = "zero_only" | "under_100" | "over_100" | "dont_care";
 export type Q6Answer = Issuer | "none";
 
 export interface QuizAnswers {
+  segment: UserSegment;
   q1: Q1Answer;
   q2: Q2Answer;
-  q3: Q3Answer;
+  q3: Q3Answer[];
   q4: Q4Answer[];
   q5: Q5Answer;
   q6: Q6Answer;

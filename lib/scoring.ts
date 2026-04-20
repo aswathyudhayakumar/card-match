@@ -4,6 +4,8 @@ import type {
   ScoredCard,
   EffectivePricing,
   LivePricing,
+  UserSegment,
+  Q3Answer,
 } from "./types";
 import { BRANCH_A_WEIGHTS, BRANCH_B_WEIGHTS } from "./constants";
 
@@ -79,31 +81,81 @@ function passesBranchBFilter(pricing: EffectivePricing): boolean {
   return !(pricing.apr_max > 22 && pricing.intro_balance_transfer_apr_months < 12);
 }
 
-function scoreDimensionA(card: Card, answers: QuizAnswers, pricing: EffectivePricing): number {
-  const { q3 } = answers;
+function scoreSinglePurpose(card: Card, pricing: EffectivePricing, purpose: Q3Answer): number {
   const tags = card.tags;
 
-  switch (q3) {
+  switch (purpose) {
     case "build_credit":
       if (tags.includes("starter") || tags.includes("credit_building")) return 30;
-      return 10;
+      return 0;
     case "cashback":
       if (card.rewards_type === "cashback") return 25;
-      return 10;
+      if (card.rewards_type === "points") return 10;
+      return 0;
     case "travel_rewards":
       if (card.rewards_type === "travel" || card.rewards_type === "points") return 25;
-      return 10;
+      return 0;
     case "low_apr":
-      if (pricing.apr_min < 17 || pricing.intro_balance_transfer_apr_months >= 15) return 30;
-      return 10;
+      if (pricing.apr_min < 17) return 30;
+      if (pricing.intro_balance_transfer_apr_months >= 15) return 30;
+      if (pricing.intro_balance_transfer_apr_months >= 12) return 15;
+      return 0;
     case "signup_bonus":
+      if (pricing.signup_bonus_value >= 500) return 25;
       if (pricing.signup_bonus_value >= 200) return 20;
-      return 10;
+      if (pricing.signup_bonus_value > 0) return 10;
+      return 0;
     case "simple":
       if (pricing.annual_fee === 0 && card.complexity === "low") return 20;
-      return 10;
+      if (card.complexity === "low") return 10;
+      return 0;
     default:
       return 0;
+  }
+}
+
+function scoreDimensionA(card: Card, answers: QuizAnswers, pricing: EffectivePricing): number {
+  let score = 0;
+  for (const purpose of answers.q3) {
+    score += scoreSinglePurpose(card, pricing, purpose);
+  }
+  return Math.min(score, 45);
+}
+
+function applySegmentMultiplier(
+  baseScore: number,
+  card: Card,
+  segment: UserSegment
+): number {
+  switch (segment) {
+    case "first_card":
+      if (card.tags.includes("starter") || card.tags.includes("credit_building")) {
+        return baseScore * 1.5;
+      }
+      if (card.tags.includes("premium")) {
+        return baseScore * 0.3;
+      }
+      return baseScore;
+
+    case "adding_card":
+      return baseScore;
+
+    case "consolidating": {
+      const bonusCategoryCount = card.rewards_categories.length;
+      if (bonusCategoryCount >= 3) return baseScore * 1.4;
+      if (card.tags.includes("rotating_categories") || bonusCategoryCount === 1) {
+        return baseScore * 0.7;
+      }
+      if (card.rewards_flat_rate >= 2) return baseScore * 1.2;
+      return baseScore;
+    }
+
+    case "upgrading":
+      if (card.tags.includes("starter") || card.tags.includes("secured")) return 0;
+      if (card.tags.includes("premium") || card.tags.includes("travel_perks")) {
+        return baseScore * 1.3;
+      }
+      return baseScore;
   }
 }
 
@@ -221,13 +273,15 @@ function scoreCard(
   const F = branch === "B" ? scoreDimensionF(pricing) : 0;
 
   const weights = branch === "A" ? BRANCH_A_WEIGHTS : BRANCH_B_WEIGHTS;
-  const score =
+  const baseScore =
     weights.A * A +
     weights.B * B +
     weights.C * C +
     weights.D * D +
     weights.E * E +
     weights.F * F;
+
+  const score = applySegmentMultiplier(baseScore, card, answers.segment);
 
   return {
     card,

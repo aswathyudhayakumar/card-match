@@ -100,7 +100,7 @@
       "rewards_categories": [
         { "category": "everything", "rate": 5, "cap": 1500, "notes": "rotating quarterly categories on activation, up to $1,500/quarter" }
       ],
-      "tags": ["starter", "student", "credit_building", "no_fee", "no_foreign_fee"],
+      "tags": ["starter", "student", "credit_building", "no_fee", "no_foreign_fee", "rotating_categories"],
       "complexity": "medium",
       "best_for": ["students", "building credit with rewards"],
       "fallback": {
@@ -156,7 +156,7 @@
         { "category": "dining", "rate": 3 },
         { "category": "travel", "rate": 5, "notes": "through Chase Travel" }
       ],
-      "tags": ["no_fee"],
+      "tags": ["no_fee", "rotating_categories"],
       "complexity": "medium",
       "best_for": ["rotating categories", "maximizing cashback"],
       "fallback": {
