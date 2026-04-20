@@ -2,7 +2,7 @@
 
 An AI-powered credit card recommendation tool that asks you 7 questions and gives you 3 ranked picks with reasoning for why each one fits.
 
-**Live demo:** [add link after you deploy]
+**Live demo:** [Link](https://card-match-ochre.vercel.app/)
 
 ---
 
