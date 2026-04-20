@@ -36,11 +36,11 @@ From those answers, CardMatch filters and scores 15 US credit cards, fetches cur
 
 ## The people I was imagining when I built this
 
-I kept four kinds of users in my head while designing the scoring logic and writing the reasoning prompts. These aren't personas from research — they're the people I imagined picking up the app and expecting it to "get them."
+I kept four kinds of users in my head while designing the scoring logic and writing the reasoning prompts. These aren't personas from research, they're the people I imagined picking up the app and expecting it to "get them."
 
 **The first-timer.** Someone in their early twenties, no credit history, scared of messing up their credit. They don't care about travel perks or sign-up bonuses. They want a card that won't punish them for being new to this.
 
-**The optimizer.** Someone who already has one card and wants to add a second to earn more cashback on their actual spending. They're not new — they just want better category coverage.
+**The optimizer.** Someone who already has one card and wants to add a second to earn more cashback on their actual spending. They're not new, they just want better category coverage.
 
 **The consolidator.** Someone with three or four cards who's tired of remembering which one to use where. They want one card that covers most of their life, even if it has a fee.
 
@@ -56,11 +56,11 @@ The scoring logic is designed so that each of these people gets different recomm
 
 There are two scoring "branches" based on whether the user pays in full or carries a balance.
 
-If you pay in full, the scoring rewards cards that match your goals, spending categories, and fee tolerance. If you carry a balance, the scoring prioritizes low APR and long 0% intro offers, and deprioritizes rewards — because CFPB research shows rewards almost never offset interest on a carried balance. When Branch B triggers, the results page also shows a banner explaining why the recommendations look different.
+If you pay in full, the scoring rewards cards that match your goals, spending categories, and fee tolerance. If you carry a balance, the scoring prioritizes low APR and long 0% intro offers, and deprioritizes rewards, because CFPB research shows rewards almost never offset interest on a carried balance. When Branch B triggers, the results page also shows a banner explaining why the recommendations look different.
 
 On top of the base scoring, there's a segment multiplier based on the first question. First-timers get starter cards boosted and premium cards suppressed. Consolidators get broad-category cards boosted and rotating-category cards penalized. Upgraders have starter cards filtered out entirely.
 
-I decided to keep all of this as clean deterministic scoring in code, not an LLM decision. The LLM only generates the "why this fits you" reasoning at the end, once the ranking is already locked in. That means two users with the same answers get the same recommendations — which matters for a product that affects financial decisions.
+I decided to keep all of this as clean deterministic scoring in code, not an LLM decision. The LLM only generates the "why this fits you" reasoning at the end, once the ranking is already locked in. That means two users with the same answers get the same recommendations, which matters for a product that affects financial decisions.
 
 ### Data architecture
 
@@ -107,10 +107,10 @@ The bigger takeaway: I shipped v1 faster than I was comfortable with. But having
 Things I'd add in v2, roughly in priority order:
 
 - Multi-select on the bank question (some people bank with more than one major bank)
-- Dynamic branching — skip questions that become irrelevant based on earlier answers
+- Dynamic branching: skip questions that become irrelevant based on earlier answers
 - Expanded card universe including credit unions and employer-specific products
 - Location and employer inputs to surface local CU cards
-- "Already have a card offer? Upload the T&Cs and I'll tell you how it compares" — bringing the original jargon-buster idea back in a more scoped way
+- "Already have a card offer? Upload the T&Cs and I'll tell you how it compares": bringing the original jargon-buster idea back in a more scoped way
 
 ---
 
