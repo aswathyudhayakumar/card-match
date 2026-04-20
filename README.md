@@ -12,7 +12,7 @@ CardMatch started as a spinoff from a different project I'd been thinking about,
 
 That made me want to build something that could flag risky language and explain key terms so people knew what they were actually signing up for. I scoped it to US credit cards because credit cards are a huge part of how people here build credit and spend.
 
-But as I built it out using RAG on actual cardholder agreements, the project started to feel overengineered and, more importantly, not that useful. The thing I kept coming back to was: *who actually has the terms and conditions open when they're trying to decide which card to get?* Nobody. People usually see the T&Cs after they've already picked a card. The decision point happens earlier — when someone is comparing options, wondering which card fits their life.
+But as I built it out using RAG on actual cardholder agreements, the project started to feel overengineered and, more importantly, not that useful. The thing I kept coming back to was: *who actually has the terms and conditions open when they're trying to decide which card to get?* Nobody. People usually see the T&Cs after they've already picked a card. The decision point happens earlier, when someone is comparing options, wondering which card fits their life.
 
 So I pivoted. Instead of explaining a card you've already chosen, CardMatch helps you choose. You answer a few questions about where you are in your credit journey, what you care about, and how you spend. The app returns three cards ranked for you, with an explanation for each.
 
